@@ -89,7 +89,7 @@ def poll_data():
             # Calculate distance to the reference point
             distance = haversine(lat1, lon1, lat2, lon2)
             current_time = datetime.now()
-            print(f"Distance between ISS and Kankipadu: {distance:.4f} km\n")
+            print(f"Distance between ISS and Kankipadu: {distance:.4f} km")
 
             # Update plot data
             lat.append(lat2)
@@ -115,7 +115,7 @@ def poll_data():
 
             # Update text
             footer_text = f'{current_time} --- Distance from ISS to Kankipadu: {distance:.2f} km, avg speed : {avgspeed:.2f} Kmph'
-            print(f'avg speed : {avgspeed:.2f} Kmph')
+            print(f'avg speed : {avgspeed:.2f} Kmph\n')
             pager_text = f'Current location: [Latitude: {lat2}, Longitude: {lon2}]'
             footer.set_text(footer_text)
             pager.set_text(pager_text)
